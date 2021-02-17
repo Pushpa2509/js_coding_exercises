@@ -1,29 +1,31 @@
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+  return word.charAt(0).toUpperCase()+ word.substring(1);
 }
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  // Add your code here!
+  return firstName.charAt(0)+ "." +lastName.charAt(0);
 }
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
-  // Add your code here!
+  let x= (vatRate*originalPrice)/100;
+  return total = originalPrice+x;
 }
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
-  // Add your code here!
+  let calc = originalPrice-((originalPrice/100)*reduction);
+  return round(calc);
 }
 
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  // Add your code here!
+  return str.charAt((str.length()-1)/2);
 }
 
 function reverseWord(word) {
